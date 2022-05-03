@@ -12,6 +12,7 @@ module "vpc" {
   name    = "lt-vpc"
   version = "~> 2.0"
 
+  
   cidr            = local.vpc_json_data.AddressSpace
   azs             = slice(data.aws_availability_zones.azs.names, 0, length(local.vpc_json_data.PublicSubnets))
   public_subnets  = local.vpc_json_data.PublicSubnets
