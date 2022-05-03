@@ -13,6 +13,7 @@ locals {
     if v.Disk1Size != "0"
   ]
 
+      
   disk2_list = [
     for k, v in local.data_map : {
       Group       = k
